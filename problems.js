@@ -17,6 +17,6 @@ function sendNotification(email) {
     return username + " " + "sent you an email from" + " " + domainName;
 }
 
-console.log(sendNotification('alamin29107@yahoo.com'))
+
 
 
