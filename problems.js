@@ -11,11 +11,18 @@ function calculateTax(income, expenses) {
 
 
 function sendNotification(email) {
-    const separated = email.split('@');
-    const username = separated[0];
-    const domainName = separated[1];
-    return username + " " + "sent you an email from" + " " + domainName;
+    if (email.indexOf('@') !== -1) {
+        const separated = email.split('@');
+        const username = separated[0];
+        const domainName = separated[1];
+        return username + " " + "sent you an email from" + " " + domainName;
+    }
+    else {
+        return "Invalid Input";
+    }
 }
+
+
 
 
 
