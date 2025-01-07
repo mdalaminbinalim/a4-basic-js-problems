@@ -81,7 +81,8 @@ function calculateFinalScore(obj) {
 
 
 function waitingTime(waitingTimes, serialNumber) {
-    if (Array.isArray(waitingTimes) === true && typeof serialNumber === 'number' && serialNumber > waitingTime.length) {
-
+    if (Array.isArray(waitingTimes) === true && typeof serialNumber === 'number' && serialNumber > waitingTimes.length) {
+        const candidatesAhead = serialNumber - 1;
+        const candidatesRemaining = candidatesAhead - waitingTimes.length;
     }
 }
