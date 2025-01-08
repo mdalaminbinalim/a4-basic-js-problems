@@ -1,3 +1,6 @@
+// -----Problem No. 1-----
+// Calculate amount of tax (20%) from profit using income and expenses of a person.
+
 function calculateTax(income, expenses) {
     const profit = income - expenses;
 
@@ -5,12 +8,14 @@ function calculateTax(income, expenses) {
         const tax = profit * 0.2;
         return tax;
     }
-
     else {
         return "Invalid Input";
     }
 }
 
+
+// -----Problem No. 2-----
+// Return a notification using the given E-mail address.
 
 function sendNotification(email) {
 
@@ -20,40 +25,40 @@ function sendNotification(email) {
         const domainName = separated[1];
         return username + " " + "sent you an email from" + " " + domainName;
     }
-
     else {
         return "Invalid Input";
     }
 }
 
 
+// -----Problem No. 3-----
+// Check whether there is numbers in a name or not.
+
 function checkDigitsInName(name) {
 
     if (typeof name === 'string') {
         for (i = 0; i < name.length; i++) {
-            characters = name[i]
-        }
+            characters = name[i];
 
-        if (!isNaN(characters)) {
-            let containsNumber = true;
-            return containsNumber;
+            if (!isNaN(characters)) {
+                let containsNumber = true;
+                return containsNumber;
+            }
         }
-
-        else {
-            return false;
-        }
+        return false;
     }
-
     else {
         return "Invalid Input"
     }
 }
 
 
+// -----Problem No. 4-----
+// Check the probability of getting job by calculating the total score of a student.
+
 function calculateFinalScore(obj) {
 
     if (typeof obj === 'object' && typeof obj.name === 'string' && typeof obj.testScore === 'number' && typeof obj.schoolGrade === 'number' && typeof obj.isFFamily === 'boolean') {
-
         if (obj.testScore <= 50 && obj.schoolGrade <= 30 && obj.isFFamily === true) {
 
             const score = obj.testScore;
@@ -65,12 +70,10 @@ function calculateFinalScore(obj) {
             if (totalScore >= 80) {
                 return true;
             }
-
             else {
                 return false;
             }
         }
-
         else if (obj.testScore <= 50 && obj.schoolGrade <= 30 && obj.isFFamily === false) {
 
             const score = obj.testScore;
@@ -82,22 +85,22 @@ function calculateFinalScore(obj) {
             if (totalScore >= 80) {
                 return true;
             }
-
             else {
                 return false;
             }
         }
-
         else {
             return false;
         }
     }
-
     else {
         return "Invalid Input";
     }
 }
 
+
+// -----Problem No. 5-----
+// Calculate the potential waiting time of a candidate using the average interview time of the previous ones.
 
 function waitingTime(waitingTimes, serialNumber) {
 
@@ -116,7 +119,6 @@ function waitingTime(waitingTimes, serialNumber) {
 
         return timeNeeded;
     }
-
     else {
         return "Invalid Input";
     }
